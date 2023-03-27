@@ -1,0 +1,4 @@
+cuda: CUDA_VISIBLE_DEVICES
+telegram:
+    token: YOUR_TELEGRAM_BOT_TOKEN
+    user_id: YOUR_TELEGRAM_USER_ID
