@@ -80,7 +80,6 @@ class Chat:
     def stream_chat(self, query) -> str:
         self.last_message_time = datetime.datetime.now()
         try:
-            # let the cuda crash so we clear the history
             for response, history in model.stream_chat(tokenizer, query, history=self.history, max_length=16384):
                 self.history = history
                 yield response
