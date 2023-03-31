@@ -80,8 +80,7 @@ class Chat:
     def stream_chat(self, query) -> str:
         self.last_message_time = datetime.datetime.now()
         try:
-            for response, history in model.stream_chat(tokenizer, query, history=self.history, max_length=16384):
-                self.history = history
+            for response, self.history in model.stream_chat(tokenizer, query, history=self.history, max_length=16384):
                 yield response
             if len(response) <= 0:
                 raise Exception("empty response")
