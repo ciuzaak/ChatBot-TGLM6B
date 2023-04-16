@@ -403,14 +403,9 @@ async def reboot(update: Update, context):
 
 async def post_init(application: Application):
     await application.bot.set_my_commands([
-        BotCommand('/id', 'id'),
-        BotCommand('/start', 'start'),
-        BotCommand('/help', 'help'),
-        BotCommand('/reset', 'reset'),
-        BotCommand('/grant', 'grant'),
-        BotCommand('/ban', 'ban'),
-        BotCommand('/status', 'status'),
-        BotCommand('/reboot', 'reboot'),
+        BotCommand('/reset', 'Reset the chat history'),
+        BotCommand('/id', 'Get your chat identifier'),
+        BotCommand('/help', 'Get help message'),
     ])
 
 boot_time = datetime.datetime.now()
